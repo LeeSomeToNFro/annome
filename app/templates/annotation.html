@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block app_content %} 
+    <div class="container">
+        <div class="row">
+            <img src="{{url_for('static',filename='pics/'+pic.pic_name+'.jpg')}}" class="col align-self-center" style="max-width:100%;max-height: 300px">
+        </div>
+    </div>
+    <p>您认为图片上框选出的【工人】和【{{ pic.object_type }}: {{ object_explain }}】正在进行何种交互？(请注意:是被带有"Worker"等标签的红框选中的工人和对象)</p>
+    <form action="" method="POST">
+        {% for verb in verbs %}
+        <label><input name="anno" type="checkbox" value="{{ verb.verb }}">【{{ verb.verb }}】:{{ verb.explanation }}</label>
+        {% endfor %}
+        <label><input name="picid" type="hidden" value="{{ pic.id }}"></label>
+        <input type="submit" class="btn btn-default" value="提交标注"/>
+        <hr>
+            <h5>以下内容为非必选</h5>
+            如果您认为该图片样本存在质量问题，请告诉我们：<br>
+            (请谨慎勾选：下面的选项将覆盖您上面的标注结果)<br>
+            <label><input name="problem" type="checkbox" value="er">图片上的对象类型与描述不符，标签存在错误</label><br>
+            <label><input name="problem" type="checkbox" value="un">图片过于模糊导致无法区分工人、对象或交互类型</label><br>
+            <input type="submit" class="btn btn-default" value="报告问题"/>
+    </form>
+{% endblock %}

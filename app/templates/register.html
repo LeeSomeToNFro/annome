@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+<div>
+    <h1>新同学注册</h1>
+    <p>
+        注册即代表您同意以下内容：<br>
+        · 您输入的所有信息将仅作为联系您和发放补助之用；<br>
+        · 补助将以代发形式发放到您的学生账户中；<br>
+        · 由于作者很菜,请文明标注,请勿攻击服务器；<br>
+        · 对于恶意刷单的行为(包括但不限于连续大量的无用标注或报错)，作者会采取必要的措施进行制止(包括但不限于取消补助、打小报告、论坛挂人等)。<br>
+        感谢您对科研工作的支持！
+    </p>
+    <!--<form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+           *请输入您的学号：<br>
+            **学号将作为发放补助的唯一依据，请谨慎填写！<br>
+            {{ form.student_id(size=16) }}<br>
+            {% for error in form.student_id.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            *请重复输入您的学号，避免错误哦：<br>
+            {{ form.student_id2(size=16) }}<br>
+            {% for error in form.student_id2.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            *请输入您的称呼哦：<br>
+            {{ form.name(size=64) }}<br>
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            如果愿意,可以留下您的联系方式(选填项,邮箱/手机号/微信号/qq均可)<br>
+            我们将在有需要的时候联系您：<br>
+            {{ form.contact(size=64) }}<br>
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>-->
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form)}}
+        </div>
+    </div>
+    </div>
+    {% endblock %}

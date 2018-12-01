@@ -1,0 +1,18 @@
+{
+    "formwork-material":["not-interacting-with","next-to","carrying","standing-on","installing"],
+    "scaffolding":["not-interacting-with","next-to","standing-on","installing","standing-in"],
+    "formwork-working":["not-interacting-with","next-to","standing-on","installing","uninstalling"],
+    "steel":["not-interacting-with","next-to","standing-on","installing"],
+    "dump-truck":["not-interacting-with","operating","standing-on","next-to"],
+    "crane":["not-interacting-with","operating","standing-under","next-to"],
+    "excavator":["not-interacting-with","next-to","operating","standing-under"],
+    "rebar-material":["not-interacting-with","next-to","carrying","welding"],
+    "rebar-working":["not-interacting-with","next-to","installing"],
+    "machine-other":["not-interacting-with","operating","next-to"],
+    "tower-crane":["not-interacting-with","standing-under","next-to"],
+    "concrete-pump":["not-interacting-with","operating","next-to"],
+    "concrete-mixer":["not-interacting-with","operating","next-to"],
+    "bulldozer":["not-interacting-with","operating","next-to"],
+    "concrete-bucket":["not-interacting-with","operating","next-to"],
+    "concrete-pouring":["not-interacting-with","leveling"]
+}

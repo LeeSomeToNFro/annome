@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block app_content %}
+    <h1>欢迎你，{{ current_user.name }}！</h1>
+    {% if current_user.count>0 %}
+    <p>您已经累计标注了{{ current_user.count }}张图片，感谢您的帮助！</p>
+    <p>您可以点击下方链接继续标注</p>
+    {% else %}
+    <p>您还没有开始标注图片哦，点击下方按钮开始标注吧~</p>
+    {% endif %}
+    <form method="GET" action="/annotation">
+        <button type="submit" class="btn btn-default">开始标注</button>
+    </form>
+{% endblock %}

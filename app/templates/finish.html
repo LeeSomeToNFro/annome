@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block app_content %}
+    <h1>FINISH！</h1>
+    <p>
+        {{ user.name }}，恭喜你，你已经到达了数据库的终点！<br>
+        目前已经没有可供你标注的图片啦。<br>
+        你一共标注了{{ user.count }}张图片，感谢你的辛勤付出！<br>
+        常回来看看，我们可能会增加新的图片。<br>
+    </p>
+    <p><a href="{{ url_for('index') }}">返回主页</a></p>
+{% endblock %}
